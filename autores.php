@@ -17,7 +17,7 @@ try {
                 a.ciudad,
                 a.estado,
                 a.pais,
-                a.codigo_postal,
+                a.cod_postal,
                 COUNT(DISTINCT ta.id_titulo) as total_libros
             FROM autores a
             LEFT JOIN titulo_autor ta ON a.id_autor = ta.id_autor
@@ -139,9 +139,9 @@ try {
                                                 </div>
                                             <?php endif; ?>
                                             
-                                            <?php if ($autor['codigo_postal']): ?>
+                                            <?php if ($autor['cod_postal']): ?>
                                                 <div class="mt-1">
-                                                    <small class="text-muted">CP: <?php echo htmlspecialchars($autor['codigo_postal']); ?></small>
+                                                    <small class="text-muted">CP: <?php echo htmlspecialchars($autor['cod_postal']); ?></small>
                                                 </div>
                                             <?php endif; ?>
                                         </div>

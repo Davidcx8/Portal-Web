@@ -12,12 +12,12 @@ try {
                 t.id_titulo,
                 t.titulo,
                 t.tipo,
-                t.id_editorial,
+                t.id_pub,
                 t.precio,
                 t.avance,
                 t.total_ventas,
                 t.notas,
-                t.fecha_publicacion,
+                t.fecha_pub,
                 CONCAT(a.nombre, ' ', a.apellido) as nombre_autor,
                 a.id_autor
             FROM titulos t
@@ -137,8 +137,8 @@ try {
                                     <?php endif; ?>
                                 </td>
                                 <td>
-                                    <?php if ($libro['fecha_publicacion']): ?>
-                                        <small><?php echo date('Y-m-d', strtotime($libro['fecha_publicacion'])); ?></small>
+                                    <?php if ($libro['fecha_pub']): ?>
+                                        <small><?php echo date('Y-m-d', strtotime($libro['fecha_pub'])); ?></small>
                                     <?php else: ?>
                                         <span class="text-muted">N/A</span>
                                     <?php endif; ?>
